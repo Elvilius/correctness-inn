@@ -43,4 +43,15 @@ defmodule InnWeb.Endpoint do
     signing_salt: "o6hxYiqK"
 
   plug InnWeb.Router
+  plug :introspect
+
+  def introspect(conn, _opts) do
+    IO.puts(conn)
+    IO.puts """
+    Verb: #{inspect(conn.method)}
+    Host: #{inspect(conn.host)}
+    Headers: #{inspect(conn.req_headers)}
+    """
+    conn
+  end
 end

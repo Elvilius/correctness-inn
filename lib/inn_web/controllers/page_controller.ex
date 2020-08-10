@@ -2,6 +2,7 @@ defmodule InnWeb.PageController do
   use InnWeb, :controller
 
   def index(conn, _params) do
-    render(conn, "index.html")
+    IO.inspect(1234555)
+    json(conn, %{a: 123123})
   end
 end
