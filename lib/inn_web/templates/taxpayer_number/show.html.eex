@@ -1,0 +1,23 @@
+<h1>Show Taxpayer number</h1>
+
+<ul>
+
+  <li>
+    <strong>User:</strong>
+    <%= @taxpayer_number.user_id %>
+  </li>
+
+  <li>
+    <strong>Inn:</strong>
+    <%= @taxpayer_number.inn %>
+  </li>
+
+  <li>
+    <strong>Is correct:</strong>
+    <%= @taxpayer_number.is_correct %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.taxpayer_number_path(@conn, :edit, @taxpayer_number) %></span>
+<span><%= link "Back", to: Routes.taxpayer_number_path(@conn, :index) %></span>

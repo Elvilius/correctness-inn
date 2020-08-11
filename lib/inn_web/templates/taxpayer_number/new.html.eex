@@ -1,0 +1,5 @@
+<h1>New Taxpayer number</h1>
+
+<%= render "form.html", Map.put(assigns, :action, Routes.taxpayer_number_path(@conn, :create)) %>
+
+<span><%= link "Back", to: Routes.taxpayer_number_path(@conn, :index) %></span>

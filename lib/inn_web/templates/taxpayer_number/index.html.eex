@@ -1,0 +1,30 @@
+<h1>Listing Taxpayer number</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Inn</th>
+      <th>Is correct</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for taxpayer_number <- @taxpayer_number do %>
+    <tr>
+      <td><%= taxpayer_number.user_id %></td>
+      <td><%= taxpayer_number.inn %></td>
+      <td><%= taxpayer_number.is_correct %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.taxpayer_number_path(@conn, :show, taxpayer_number) %></span>
+        <span><%= link "Edit", to: Routes.taxpayer_number_path(@conn, :edit, taxpayer_number) %></span>
+        <span><%= link "Delete", to: Routes.taxpayer_number_path(@conn, :delete, taxpayer_number), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Taxpayer number", to: Routes.taxpayer_number_path(@conn, :new) %></span>

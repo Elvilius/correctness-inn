@@ -17,7 +17,6 @@ defmodule InnWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
-    get "/inn", InnController, :index
   end
 
   # Other scopes may use custom stacks.
